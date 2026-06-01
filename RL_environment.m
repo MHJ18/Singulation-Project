@@ -478,7 +478,7 @@ classdef RL_environment < rl.env.MATLABEnvironment
 
         function varargout = plot(this)
             if isempty(this.Visualizer) || ~isvalid(this.Visualizer)
-                this.Visualizer = AMSVisualizer(this);
+                this.Visualizer = AMSVisualizer_simple(this);
             else
                 bringToFront(this.Visualizer);
             end
